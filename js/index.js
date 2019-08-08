@@ -89,21 +89,26 @@ title.append(h1text[2])
 
 let btn = document.querySelector('button')
 btn.textContent =  siteContent['cta']['button']
+btn.style.background = 'green'
 
 let topImg = document.getElementById("cta-img");
 topImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let features = document.querySelector('.top-content h4')
 features.textContent = siteContent['main-content']['features-h4']
-
 let featuresContent = document.querySelector('.top-content p')
 featuresContent.textContent = siteContent['main-content']['features-content']
 
 let h4Title = document.querySelectorAll('h4')
 h4Title[1].textContent = siteContent['main-content']['about-h4']
+h4Title[1].style.color = 'green'
 h4Title[2].textContent = siteContent['main-content']['services-h4']
+h4Title[0].style.color = 'green'
 h4Title[3].textContent = siteContent['main-content']['product-h4']
+h4Title[2].style.color = 'green'
 h4Title[4].textContent = siteContent['main-content']['vision-h4']
+h4Title[3].style.color = 'green'
+h4Title[4].style.color = 'green'
 
 let pText = document.querySelectorAll('.main-content p')
 pText[1].textContent = siteContent['main-content']['about-content']
@@ -116,6 +121,7 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let contact = document.querySelector('.contact h4')
 contact.textContent = siteContent['contact']['contact-h4']
+contact.style.color = 'green'
 let contactContent = document.querySelectorAll('.contact p')
 contactContent[0].textContent = siteContent['contact']['address']
 contactContent[1].textContent = siteContent['contact']['phone']
