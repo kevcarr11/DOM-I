@@ -41,30 +41,95 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 let navItem1 = document.querySelector('nav a')
 navItem1.textContent = siteContent["nav"]["nav-item-1"]
+navItem1.style.color = 'green'
 
 let navItem2 = document.querySelector('nav a:nth-child(2)')
 navItem2.textContent = siteContent["nav"]["nav-item-2"]
+navItem2.style.color = 'green'
 
 let navItem3 = document.querySelector('nav a:nth-child(3)')
 navItem3.textContent = siteContent["nav"]["nav-item-3"]
+navItem3.style.color = 'green'
 
 let navItem4 = document.querySelector('nav a:nth-child(4)')
 navItem4.textContent = siteContent["nav"]["nav-item-4"]
+navItem4.style.color = 'green'
 
 let navItem5 = document.querySelector('nav a:nth-child(5)')
 navItem5.textContent = siteContent["nav"]["nav-item-5"]
+navItem5.style.color = 'green'
 
 let navItem6 = document.querySelector('nav a:nth-child(6)')
 navItem6.textContent = siteContent["nav"]["nav-item-6"]
+navItem6.style.color = 'green'
 
-let title = document.querySelector('h1')
-title.textContent = siteContent['cta']['h1']
+const newNavItem = document.createElement('a')
+document.querySelector('header nav').appendChild(newNavItem)
+newNavItem.textContent = "Blog"
+
+const newNavItem2 = document.createElement('a')
+document.querySelector('header nav').prepend(newNavItem2)
+newNavItem2.textContent = "Learn More"
+
+const title = document.querySelector('h1')
+const h1br = document.createElement('br');
+const h1br2 = document.createElement('br');
+const h1text = siteContent['cta']['h1'].split(' ');
+title.append(h1br)
+title.prepend(h1text[0])
+title.append(h1text[1])
+title.append(h1br2)
+title.append(h1text[2])
+
+
+
 
 let btn = document.querySelector('button')
 btn.textContent =  siteContent['cta']['button']
 
 let topImg = document.getElementById("cta-img");
 topImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let features = document.querySelector('.top-content h4')
+features.textContent = siteContent['main-content']['features-h4']
+
+let featuresContent = document.querySelector('.top-content p')
+featuresContent.textContent = siteContent['main-content']['features-content']
+
+let h4Title = document.querySelectorAll('h4')
+h4Title[1].textContent = siteContent['main-content']['about-h4']
+h4Title[2].textContent = siteContent['main-content']['services-h4']
+h4Title[3].textContent = siteContent['main-content']['product-h4']
+h4Title[4].textContent = siteContent['main-content']['vision-h4']
+
+let pText = document.querySelectorAll('.main-content p')
+pText[1].textContent = siteContent['main-content']['about-content']
+pText[2].textContent = siteContent['main-content']['services-content']
+pText[3].textContent = siteContent['main-content']['product-content']
+pText[4].textContent = siteContent['main-content']['vision-content']
+
+let middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let contact = document.querySelector('.contact h4')
+contact.textContent = siteContent['contact']['contact-h4']
+let contactContent = document.querySelectorAll('.contact p')
+contactContent[0].textContent = siteContent['contact']['address']
+contactContent[1].textContent = siteContent['contact']['phone']
+contactContent[2].textContent = siteContent['contact']['email']
+
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent['footer']['copyright']
+
+
+
+
+
+
+
+
+
 
